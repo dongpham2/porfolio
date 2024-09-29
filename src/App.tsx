@@ -1,8 +1,15 @@
-function App() {
+import { Switch } from "./components/switch"
+import { useTheme } from "./components/theme-provider"
 
+function App() {
+  const { setTheme } = useTheme()
+  
+  const onChangeTheme = () => {
+    setTheme("light")
+  }
   return (
     <>
-      <h1>aaa</h1>
+      <Switch onChange={onChangeTheme}/>
     </>
   )
 }
