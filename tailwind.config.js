@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -51,6 +51,33 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // custome color
+        navbar: {
+          DEFAULT: "var(--nav-bar-background)",
+          primary: "var(--nav-bar-background)",
+        },
+        background: {
+          DEFAULT: "var(--pink-primary)",
+          secondary: "rgba(var(--pink-secondary))",
+        },
+        text: {
+          DEFAULT: "var(--text-default)",
+          primary: "var(--text-primary-color)",
+          secondary: "var(--text-secondary-color)",
+        },
+        textHover: {
+          DEFAULT: "var(--text-default)",
+          primary: "var(--text-primary-color)",
+          secondary: "var(--text-secondary-color)",
+        },
+        content: {
+          DEFAULT: "var(--content-color)",
+          primary: "var(--content-color)",
+        },
+        background: {
+          DEFAULT: "var(--background-primary-color)",
+          primary: "var(--background-primary-color)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -74,4 +101,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
