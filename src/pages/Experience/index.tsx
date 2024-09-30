@@ -17,7 +17,7 @@ const ExperienceData: IExperiencePortalProps[] = [
 const Experience = () => {
   return (
     <div className="">
-      <h1 className="text-lg md:text-3xl mb-6 underline">Work Experience</h1>
+      <h1 className="text-lg md:text-3xl mb-8 underline">Work Experience</h1>
       <div className="grid md:grid-cols-2 gap-3 md:gap-5">
         {ExperienceData.map((item, index) => (
           <ExperiencePortal companyName={item.companyName} logo={item.logo} description={item.description} key={index}/>
