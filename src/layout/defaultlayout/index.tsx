@@ -6,7 +6,7 @@ const DefaultLayout = () => {
   return (
     <div>
       <NavBar/>
-      <div className='bg-content-primary h-[100vh] px-40 pt-14'>
+      <div className='bg-content-primary h-[100vh] px-10 md:px-40 pt-14'>
         <Outlet/>
       </div>
       <Footer/>

@@ -73,6 +73,7 @@ body {
     --text-secondary-color: #000000b6;
     --content-color: #f1eaea;
     --background-primary-color: #000;
+    --company-primary-color: #ff4438;
   }
 
   .dark {
@@ -109,6 +110,7 @@ body {
     --text-primary-color: #fafafa;
     --content-color: #11071f;
     --background-primary-color: #fff;
+    --company-primary-color: #ff4438;
   }
 }
 

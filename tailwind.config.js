@@ -78,6 +78,10 @@ module.exports = {
           DEFAULT: "var(--background-primary-color)",
           primary: "var(--background-primary-color)",
         },
+        company: {
+          DEFAULT: "var(--company-primary-color)",
+          primary: "var(--company-primary-color)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
