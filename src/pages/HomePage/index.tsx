@@ -1,5 +1,8 @@
 import me from "@/assets/logo.webp"
 import { Link } from "react-router-dom"
+import Experience from "../Experience"
+import TechStack from "../TechStack"
+import Project from "../Project"
 
 const HomePage = () => {
   return (
@@ -15,6 +18,15 @@ const HomePage = () => {
           between user needs and business goals.</p>
         </div>
         <img src={me} alt="me" className='md:flex-1 size-44 flex items-center justify-center mt-4 md:mt-0'/>
+      </section>
+      <section className="mt-20">
+        <Experience/>
+      </section>
+      <section className="mt-20">
+        <TechStack/>
+      </section>
+      <section className="mt-20">
+        <Project/>
       </section>
     </main>
   )

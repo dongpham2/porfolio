@@ -4,9 +4,9 @@ import { Outlet } from 'react-router-dom'
 
 const DefaultLayout = () => {
   return (
-    <div>
+    <div className='text-sm md:text-base'>
       <NavBar/>
-      <div className='bg-content-primary h-[100vh] px-10 md:px-40 pt-14'>
+      <div className='bg-content-primary h-[100%] px-10 md:px-40 pt-14'>
         <Outlet/>
       </div>
       <Footer/>

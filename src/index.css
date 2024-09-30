@@ -7,7 +7,6 @@ body {
   font-family: "Preahvihear", sans-serif;
   color: var(--text-default);
   font-style: normal;
-  font-size: 16px;
 }
 
 @layer base {
@@ -74,6 +73,8 @@ body {
     --content-color: #f1eaea;
     --background-primary-color: #000;
     --company-primary-color: #ff4438;
+    --border-primary-color: #693b93;
+    --violet-primary-color: #a362ff;
   }
 
   .dark {
@@ -111,6 +112,8 @@ body {
     --content-color: #11071f;
     --background-primary-color: #fff;
     --company-primary-color: #ff4438;
+    --border-primary-color: #693b93;
+    --violet-primary-color: #a362ff;
   }
 }
 

@@ -18,11 +18,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        border: {
+          DEFAULT: "hsl(var(--border))",
+          primary: "var(--border-primary-color)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -81,6 +84,10 @@ module.exports = {
         company: {
           DEFAULT: "var(--company-primary-color)",
           primary: "var(--company-primary-color)",
+        },
+        violet: {
+          DEFAULT: "var(--violet-primary-color)",
+          primary: "var(--violet-primary-color)",
         },
       },
       borderRadius: {
