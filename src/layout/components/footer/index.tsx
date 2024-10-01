@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex flex-col w-[70%] gap-10">
         <p>If you're looking for someone passionate about improving lives through accessible design, let's connect! Reach out to me at</p>
         <span className="font-bold">
-          ibrhaimmemon930@gmail.com.
+          dongpham21082001@gmail.com.
         </span>
       </div>
       <div className="flex gap-6 mt-6 pb-28">
