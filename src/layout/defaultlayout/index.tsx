@@ -8,8 +8,8 @@ const DefaultLayout = () => {
       <NavBar/>
       <div className='bg-content-primary h-[100%] px-10 md:px-40 pt-14'>
         <Outlet/>
+        <Footer/>
       </div>
-      <Footer/>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 export interface IExperiencePortalProps {
+  to: string;
   logo: string;
   companyName: string;
   description: string;

@@ -6,7 +6,7 @@ import arrow from "@/assets/arrow.png"
 const ProjectCard = () => {
   return (
     <div className="flex flex-col md:flex-row gap-3 items-center md:items-start">
-        <div className="flex flex-col gap-4 w-[50%]"> 
+        <div className="flex flex-col gap-4 w-[100%]"> 
           <div className="flex flex-col gap-2 items-center md:items-start">
             <h2>Project name: <span className="text-violet-primary text-sm md:text-xl">Jobrocky</span></h2>
             <Link to="https://www.jobrocky.com/" target="_blank" className="text-xl md:text-4xl cursor-pointer relative">Demo <img src={arrow} alt="arrow" className="absolute -top-10 -left-24 md:-top-14 md:-left-28 rotate-[230deg]  w-24 md:w-full"/></Link>
@@ -17,7 +17,7 @@ const ProjectCard = () => {
             <img src={click} alt="click" className="size-5 cursor-pointer"/>
           </div>
         </div>
-        <img src={jobrocky} alt={jobrocky} className="w-1/2"/>
+        <img src={jobrocky} alt={jobrocky} className="flex-1 w-1/2"/>
       </div>
   )
 }

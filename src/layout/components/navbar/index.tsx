@@ -14,18 +14,18 @@ const navbarItem = [
     path: "/blog",
     route: "Blog",
   },
-  {
-    path: "/experience",
-    route: "Experience",
-  },
-  {
-    path: "/project",
-    route: "Project",
-  },
-  {
-    path: "/tech-stack",
-    route: "Tech stack",
-  },
+  // {
+  //   path: "/experience",
+  //   route: "Experience",
+  // },
+  // {
+  //   path: "/project",
+  //   route: "Project",
+  // },
+  // {
+  //   path: "/tech-stack",
+  //   route: "Tech stack",
+  // },
 ];
 
 const NavBar = () => {
@@ -65,7 +65,7 @@ const NavBar = () => {
   };
   
   return (
-    <nav className="h-16 bg-navbar-primary p-4 pt-0 sticky top-0 right-0 left-0 border border-b-primary-foreground">
+    <nav className="h-16 bg-navbar-primary p-4 pt-0 sticky top-0 right-0 left-0 border border-b-primary-foreground z-50">
       <div className="flex justify-between items-center text-text-secondary relative">
         <Link to="/home">
           <img src={logo} alt="logo" className="size-16" />
