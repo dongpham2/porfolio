@@ -3,6 +3,7 @@ export interface IExperiencePortalProps {
   logo: string;
   companyName: string;
   description: string;
+  time: string;
 }
 export interface IProjectCardProps {
   name: string;

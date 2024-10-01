@@ -63,7 +63,7 @@ const NavBar = () => {
   const handleToggleMenu = () => {
     setIsHiddenMenu(!isHiddenMenu);
   };
-  
+
   return (
     <nav className="h-16 bg-navbar-primary p-4 pt-0 sticky top-0 right-0 left-0 border border-b-primary-foreground z-50">
       <div className="flex justify-between items-center text-text-secondary relative">
@@ -75,9 +75,8 @@ const NavBar = () => {
             <Link
               to={item.path}
               key={index}
-              className={`hover:text-text-primary ${
-                location.pathname === item.path ? "text-text-primary" : ""
-              }`}
+              className={`hover:text-text-primary ${location.pathname === item.path ? "text-text-primary" : ""
+                }`}
             >
               {item.route}
             </Link>
@@ -111,24 +110,25 @@ const NavBar = () => {
         {isHiddenMenu && (
           <div
             ref={menuRef}
-            className={`gap-5 md:hidden flex flex-col absolute -right-2 top-2 bg-navbar-primary w-full max-w-60 border px-4 py-2 transition-all duration-300 ease-in-out transform ${
-              isHiddenMenu ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-            }`}
+            className={`gap-5 md:hidden flex flex-col absolute -right-2 top-2 bg-navbar-primary w-full max-w-60 border px-4 py-2 transition-all duration-300 ease-in-out transform ${isHiddenMenu ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+              }`}
           >
-            <Button
-              variant="ghost"
-              className="text-2xl text-end cursor-pointer inline-block"
-              onClick={() => setIsHiddenMenu(false)}
-            >
-              x
-            </Button>
+            <div className="text-end">
+              <Button
+                variant="ghost"
+                size="default"
+                className="text-2xl cursor-pointer w-fit"
+                onClick={() => setIsHiddenMenu(false)}
+              >
+                x
+              </Button>
+            </div>
             {navbarItem.map((item, index) => (
               <Link
                 to={item.path}
                 key={index}
-                className={`hover:text-text-primary ${
-                  location.pathname === item.path ? "text-text-primary" : ""
-                }`}
+                className={`hover:text-text-primary ${location.pathname === item.path ? "text-text-primary" : ""
+                  }`}
               >
                 {item.route}
               </Link>
