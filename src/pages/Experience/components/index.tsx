@@ -21,7 +21,7 @@ const ExperiencePortal: React.FC<IExperiencePortalProps> = (props) => {
                         <div className="flex justify-between space-x-4">
                             <Avatar>
                                 <AvatarImage src={logo} />
-                                <AvatarFallback>VC</AvatarFallback>
+                                <AvatarFallback>{companyName}</AvatarFallback>
                             </Avatar>
                             <div className="space-y-1">
                                 <h4 className="text-sm md:text-lg font-semibold font-serif">{companyName}</h4>

@@ -1,4 +1,4 @@
-import me from "@/assets/logo.webp"
+import me from "@/assets/banner.jfif"
 import { Link } from "react-router-dom"
 import Experience from "../Experience"
 import TechStack from "../TechStack"
@@ -17,7 +17,7 @@ const HomePage = () => {
           I make meaningful and delightful digital products that create an equilibrium
           between user needs and business goals.</p>
         </div>
-        <img src={me} alt="me" className='md:flex-1 size-44 flex items-center justify-center mt-4 md:mt-0'/>
+        <img src={me} alt="me" className='md:flex-1 w-40 flex items-center justify-center mt-4 md:mt-0 rounded-full'/>
       </section>
       <section className="mt-20">
         <Experience/>
