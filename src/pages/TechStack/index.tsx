@@ -64,7 +64,7 @@ const TechStack = () => {
       <div className="flex items-center w-[90%] mx-auto text-center my-5">
         <p className="items-center">I'm a <span className="md:text-lg text-violet-primary font-semibold uppercase">frontend developer</span> currently working with modern tech <span className="md:text-lg text-violet-primary font-semibold">stacks</span>, looking to join a <span className="md:text-lg text-violet-primary font-semibold">cross-functional</span> team that values improving people's lives through accessible design.</p>
       </div>
-      <ul className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 my-12">
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 my-12">
         {TechStackData.map((tech, index) => (
           <li key={index} className="flex items-center space-x-3">
             <tech.icon className="text-2xl" /> {/* Render the icon */}
@@ -72,7 +72,9 @@ const TechStack = () => {
           </li>
         ))}
       </ul>
-      <img src={techstack} alt="techstack" />
+      <div className="flex xl:justify-center">
+        <img src={techstack} alt="techstack" />
+      </div>
     </div>
   )
 }

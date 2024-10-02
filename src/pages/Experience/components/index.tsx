@@ -8,8 +8,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/avatar";
 const ExperiencePortal: React.FC<IExperiencePortalProps> = (props) => {
     const { to, logo, companyName, description, time } = props
     return (
-        <div className="flex flex-col md:flex-row items-center border border-border-primary rounded-xl rounded-l-none hover:cursor-pointer p-3 gap-5">
-            <img src={logo} alt={companyName} className="bg-cover bg-no-repeat bg-center rounded-full size-14" />
+        <div className="flex flex-col md:flex-row items-center border border-border-primary rounded-xl hover:cursor-pointer p-3 gap-5">
+            <img src={logo} alt={companyName} className="bg-cover size-10 sm:size-14" />
             <div className="font-serif flex flex-col :md-flex-row items-center md:items-start gap-4">
                 <Link to={to} target="_blank"><h2 className="text-sm md:text-base font-semibold">{companyName}</h2></Link>
                 <p className="text-sm font-thin line-clamp-3">{description}</p>
