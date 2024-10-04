@@ -2,7 +2,7 @@ import ProjectCard from "./components"
 
 const Project = () => {
   return (
-    <div>
+    <div id="project-section">
       <h1 className="text-lg md:text-3xl mb-8 underline">Featured  Project</h1>
       <section>
         <ProjectCard/>

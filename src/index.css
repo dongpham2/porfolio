@@ -75,6 +75,7 @@ body {
     --company-primary-color: #ff4438;
     --border-primary-color: #693b93;
     --violet-primary-color: #a362ff;
+    --scroll-bg: #52565a11;
   }
 
   .dark {
@@ -114,6 +115,7 @@ body {
     --company-primary-color: #ff4438;
     --border-primary-color: #693b93;
     --violet-primary-color: #a362ff;
+    --scroll-bg: #d7dadd11;
   }
 }
 

@@ -3,9 +3,6 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
 import DefaultLayout from "./layout/defaultlayout";
 import HomePage from "./pages/HomePage";
 import Blog from "./pages/Blog";
-import Experience from "./pages/Experience";
-import Project from "./pages/Project";
-import TechStack from "./pages/TechStack";
 
 const router = createBrowserRouter([
   {
@@ -24,18 +21,6 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog />,
       },
-      {
-        path: "/experience",
-        element: <Experience />,
-      },
-      {
-        path: "/project",
-        element: <Project />,
-      },
-      {
-        path: "/tech-stack",
-        element: <TechStack />,
-      },
     ],
   },
 ]);
@@ -48,7 +33,7 @@ const App = () => {
   return (
     <div data-testid="app">
       <Suspense>
-        <NestedApp />
+          <NestedApp />
       </Suspense>
     </div>
   );

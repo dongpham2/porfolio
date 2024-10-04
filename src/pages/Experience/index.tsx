@@ -22,7 +22,7 @@ const ExperienceData: IExperiencePortalProps[] = [
 
 const Experience = () => {
   return (
-    <div className="">
+    <div id="experience-section" className="pb-6">
       <h1 className="text-lg md:text-3xl mb-8 underline">Work Experience</h1>
       <div className="grid md:grid-cols-2 gap-3 md:gap-5">
         {ExperienceData.map((item, index) => (

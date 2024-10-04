@@ -1,37 +1,44 @@
 import { Switch } from "@/components/switch";
 import { useTheme } from "@/components/theme-provider";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/button";
 
 const navbarItem = [
   {
-    path: "/home",
+    path: "/",
     route: "Home",
+    targetId: "home-section", // ID của phần tử
   },
   {
-    path: "/blog",
-    route: "Blog",
+    path: "/",
+    route: "Experience",
+    targetId: "experience-section",
+  },
+  {
+    path: "/",
+    route: "Tech stack",
+    targetId: "tech-stack-section",
+  },
+  {
+    path: "/",
+    route: "Project",
+    targetId: "project-section",
   },
   // {
-  //   path: "/experience",
-  //   route: "Experience",
-  // },
-  // {
-  //   path: "/project",
-  //   route: "Project",
-  // },
-  // {
-  //   path: "/tech-stack",
-  //   route: "Tech stack",
+  //   path: "/",
+  //   route: "Blog",
+  //   scrollPosition: 0,
   // },
 ];
 
 const NavBar = () => {
-  const location = useLocation();
   const { theme, setTheme } = useTheme();
+
   const [isHiddenMenu, setIsHiddenMenu] = useState<boolean>(false);
+  const [, setActiveIndex] = useState<number>(0);
+
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -52,12 +59,47 @@ const NavBar = () => {
     };
   }, [isHiddenMenu]);
 
-  const handleToggleColorMode = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      navbarItem.forEach((item, index) => {
+        const section = document.getElementById(item.targetId);
+        if (section) {
+          const sectionTop = section.getBoundingClientRect().top - 60;
+          const nextSection = navbarItem[index + 1]
+            ? document.getElementById(navbarItem[index + 1].targetId)
+            : null;
+          const nextSectionTop = nextSection
+            ? nextSection.getBoundingClientRect().top - 60
+            : Infinity;
+
+          if (scrollY >= sectionTop && scrollY < nextSectionTop) {
+            setActiveIndex(index);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleClickScrollToSection = (targetId: string) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const targetPosition = targetElement.getBoundingClientRect().top - 64;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
     }
+  };
+
+  const handleToggleColorMode = () => {
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   const handleToggleMenu = () => {
@@ -67,16 +109,18 @@ const NavBar = () => {
   return (
     <nav className="h-16 bg-navbar-primary p-4 pt-0 sticky top-0 right-0 left-0 border border-b-primary-foreground z-50">
       <div className="flex justify-between items-center text-text-secondary relative">
-        <Link to="/home">
-          <img src={logo} alt="logo" className="size-16" />
-        </Link>
+        <Link to='/' className="cursor-pointer" onClick={(e) => {
+          e.preventDefault()
+          handleClickScrollToSection("#home-section")
+        }}><img src={logo} alt="logo" className="size-16" /></Link>
         <div className="items-center gap-5 hidden md:flex">
           {navbarItem.map((item, index) => (
             <Link
               to={item.path}
               key={index}
-              className={`hover:text-text-primary ${location.pathname === item.path ? "text-text-primary" : ""
-                }`}
+              // className={`hover:text-text-primary ${activeIndex === index ? "text-text-primary" : ""}`}
+              className={`hover:text-text-primary`}
+              onClick={() => handleClickScrollToSection(item.targetId)}
             >
               {item.route}
             </Link>
@@ -127,8 +171,8 @@ const NavBar = () => {
               <Link
                 to={item.path}
                 key={index}
-                className={`hover:text-text-primary ${location.pathname === item.path ? "text-text-primary" : ""
-                  }`}
+                className={`hover:text-text-primary`}
+                onClick={() => handleClickScrollToSection(item.targetId)}
               >
                 {item.route}
               </Link>

@@ -77,6 +77,10 @@ module.exports = {
           DEFAULT: "var(--content-color)",
           primary: "var(--content-color)",
         },
+        scroll: {
+          DEFAULT: "var(--scroll-bg)",
+          primary: "var(--scroll-bg)",
+        },
         background: {
           DEFAULT: "var(--background-primary-color)",
           primary: "var(--background-primary-color)",
@@ -104,10 +108,19 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "profile-animate": {
+          "0%": { borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%" },
+          "50%": { borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%" },
+          "100%": { borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "profile-animate": "profile-animate 4s ease-in-out infinite",
+      },
+      boxShadow: {
+        "3xl": "inset 0 0 0 9px rgba(255, 255, 255 / 30%)",
       },
     },
   },
